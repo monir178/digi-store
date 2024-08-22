@@ -6,7 +6,7 @@ import { Button, buttonVariants } from "./ui/button";
 const Banner = () => {
   return (
     <BackgroundBeamsWithCollision>
-      <div className="mx-auto py-20 text-center flex flex-col items-center max-w-3xl">
+      <div className="mx-auto py-20 text-center flex flex-col items-center max-w-4xl">
         <h2 className="text-4xl relative sm:text-6xl font-bold text-center text-gray-900 dark:text-white font-sans tracking-tight">
           Your Destination for Premium{" "}
           <div className="relative mx-auto inline-block w-max [filter:drop-shadow(0px_1px_3px_rgba(27,_37,_80,_0.14))]">
@@ -19,8 +19,13 @@ const Banner = () => {
           </div>
         </h2>
         <p className="mt-6 text-lg max-w-prose text-muted-foreground">
-          Discover DigiStore, where every digital product is handpicked and
-          vetted to meet our uncompromising quality standards. Elevate your
+          Discover{" "}
+          <span className="font-bold text-violet-500 text-lg">DigiStore</span>,
+          where every digital product is{" "}
+          <span className="underline-offset-4 underline">
+            handpicked and vetted
+          </span>{" "}
+          to meet our &nbsp; uncompromising quality standards. Elevate your
           projects with assets that inspire and perform.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-6 ">

@@ -8,8 +8,8 @@ export default function Home() {
       <MaxWidthWrapper>
         <Banner />
         {/* Todo: List Products here */}
+        <StandOutSection />
       </MaxWidthWrapper>
-      <StandOutSection />
     </>
   );
 }

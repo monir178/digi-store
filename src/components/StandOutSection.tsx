@@ -29,7 +29,7 @@ const StandOutSection = () => {
         <h1 className="text-2xl font-bold tracking-tight text-center text-gray-500 sm:text-3xl mb-12">
           Why We Stand Out ?
         </h1>
-        <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0">
+        <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-0">
           {perks.map((perk) => (
             <div
               key={perk.name}
