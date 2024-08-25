@@ -44,13 +44,13 @@ const NavItem = ({
         <div
           onClick={() => close()}
           className={cn(
-            "absolute inset-x-0 top-full text-sm text-muted-foreground",
+            "absolute inset-x-0 top-full text-sm text-muted-foreground ",
             {
               "animate-in fade-in-10 slide-in-from-top-5": !isAnyOpen,
             }
           )}>
           <div
-            className="absolute inset-0 top-1/2 bg-white shadow"
+            className="absolute inset-0 top-1/2 bg-white shadow-md"
             aria-hidden="true"
           />
 
