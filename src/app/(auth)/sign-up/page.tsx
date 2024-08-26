@@ -24,11 +24,10 @@ const SignUp = () => {
     resolver: zodResolver(AuthCredentialsValidator),
   });
 
-  const { data } = trpc.anyApiRoute.useQuery();
-  console.log(data);
+  const { mutate, isLoading } = trpc.auth.createPayloadUser.useMutation({});
 
   const onSubmit = ({ email, password }: TAuthCredentialsValidator) => {
-    //send data to the server
+    mutate({ email, password });
   };
 
   return (
@@ -38,9 +37,10 @@ const SignUp = () => {
           <div className="flex flex-col items-center space-y-2 text-center">
             <Image
               src="/digiStore.svg"
-              alt=" digiStore logo"
+              alt="digiStore logo"
               width={80}
               height={80}
+              priority={true}
             />
             <h1 className="text-2xl font-bold">Create an account</h1>
 
@@ -76,6 +76,7 @@ const SignUp = () => {
                   </Label>
                   <Input
                     {...register("password")}
+                    type="password"
                     placeholder="Password"
                     className={cn({
                       "focus-visible:ring-red-500": errors.password,

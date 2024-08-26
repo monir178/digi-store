@@ -35,10 +35,10 @@ const start = async () => {
     app.use((req, res) => nextHandler(req, res))
 
     nextApp.prepare().then(() => {
-        // payload.logger.info('DigiStore Server started');
+        payload.logger.info('DigiStore Server started');
 
         app.listen(PORT, async () => {
-            // payload.logger.info(`DigiStore Server App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`)
+            payload.logger.info(`DigiStore Server App URL: ${process.env.NEXT_PUBLIC_SERVER_URL}`)
         })
     })
 
