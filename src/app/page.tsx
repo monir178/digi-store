@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
+import ProductReel from "@/components/ProductReel";
 import StandOutSection from "@/components/StandOutSection";
 
 export default function Home() {
@@ -7,7 +8,11 @@ export default function Home() {
     <>
       <MaxWidthWrapper>
         <Banner />
-        {/* Todo: List Products here */}
+        <ProductReel
+          query={{ sort: "desc", limit: 4 }}
+          title="Brand new"
+          href="/products"
+        />
         <StandOutSection />
       </MaxWidthWrapper>
     </>
