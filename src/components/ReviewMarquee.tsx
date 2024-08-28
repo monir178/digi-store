@@ -83,7 +83,7 @@ const ReviewMarquee = () => {
           What customer says about us
         </h1>
         <div className="bg-white py-8">
-          <Marquee pauseOnHover gradient={false} direction="right" speed={30}>
+          <Marquee pauseOnHover gradient={false} direction="right" speed={70}>
             {userReviews.map((review) => (
               <div key={review.id} className="mx-4">
                 <ReviewCard {...review} />
