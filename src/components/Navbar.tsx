@@ -5,22 +5,22 @@ import Image from "next/image";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
 import Cart from "./Cart";
-import { getServerSideUser } from "@/lib/payload.utils";
+import { getServerSideUser } from "@/lib/payload-utils";
 import { cookies } from "next/headers";
 import UserAccountNav from "./UserAccountNav";
+import MobileNav from "./MobileNav";
 
 const Navbar = async () => {
   const nextCookies = cookies();
-
   const { user } = await getServerSideUser(nextCookies);
 
   return (
-    <div className="bg-white sticky z-50 top-0 inset-x-0 h-16 ">
+    <div className="bg-white sticky z-50 top-0 inset-x-0 h-16">
       <header className="relative bg-white">
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
-              {/* Todo: Mobile Nav */}
+              <MobileNav />
 
               <div className=" flex lg:ml-0">
                 <Link href="/" className="flex items-center">
@@ -35,6 +35,7 @@ const Navbar = async () => {
                   </p>
                 </Link>
               </div>
+
               <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">
                 <NavItems />
               </div>
@@ -44,8 +45,10 @@ const Navbar = async () => {
                   {user ? null : (
                     <Link
                       href="/sign-in"
-                      className={buttonVariants({ variant: "ghost" })}>
-                      Sign In
+                      className={buttonVariants({
+                        variant: "ghost",
+                      })}>
+                      Sign in
                     </Link>
                   )}
 
