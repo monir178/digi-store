@@ -1,4 +1,4 @@
-//@ts-nocheck
+import AddToCartButton from "@/components/AddToCartButton";
 import ImageSlider from "@/components/ImageSlider";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import ProductReel from "@/components/ProductReel";
@@ -117,17 +117,17 @@ const ProductDetails = async ({ params }: IPageProps) => {
           </div>
 
           {/* Product Images section */}
-          <div className="mt-10 lg:col-start-2 lg:row-start-2 lg:mt-0 lg:self-center">
+          <div className="mt-10 lg:col-start-2 lg:row-span-2 lg:mt-0 lg:self-center">
             <div className="aspect-square rounded-lg">
               <ImageSlider urls={validUrls} />
             </div>
           </div>
 
           {/* Add to cart section */}
-          <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
+          <div className="mt-10 lg:col-start-1 lg:row-span-2 lg:max-w-lg lg:self-start">
             <div>
               <div className="mt-10">
-                <AddToCartButton />
+                <AddToCartButton product={product} />
               </div>
               <div className="mt-6 text-center">
                 <div className="group inline-flex text-sm text-medium">

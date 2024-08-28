@@ -31,7 +31,12 @@ const VerifyEmail = ({ token }: IVerifyEmailProps) => {
     return (
       <div className="flex h-full flex-col items-center justify-center">
         <div className="relative mb-4 h-60 w-60 text-muted-foreground">
-          <Image src="/email-sent.jpg" fill alt="email sent" />
+          <Image
+            src="/email-sent.jpg"
+            fill
+            alt="email sent"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </div>
         <h3 className="font-semibold text-2xl">You&apos;re all set!</h3>
         <p className="text-muted-foreground text-center mt-1">
