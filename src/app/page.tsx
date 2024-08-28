@@ -1,6 +1,7 @@
 import Banner from "@/components/Banner";
 import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import ProductReel from "@/components/ProductReel";
+import ReviewMarquee from "@/components/ReviewMarquee";
 import StandOutSection from "@/components/StandOutSection";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
           href="/products"
         />
         <StandOutSection />
+        <ReviewMarquee />
       </MaxWidthWrapper>
     </>
   );
