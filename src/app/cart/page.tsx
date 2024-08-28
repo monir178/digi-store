@@ -36,7 +36,7 @@ const CartPage = () => {
     0
   );
 
-  const fee = 60;
+  const fee = 1;
 
   return (
     <div className="bg-white">
