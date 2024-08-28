@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es6", // Consider changing to es6 or esnext if compatibility allows
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "skipLibCheck": false, // Set to false to catch type errors in libraries
+    "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "commonjs", // Ensure this matches your module system
+    "module": "CommonJS",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,

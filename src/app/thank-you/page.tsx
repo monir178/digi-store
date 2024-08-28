@@ -1,5 +1,3 @@
-//@ts-nocheck
-
 import { getServerSideUser } from "@/lib/payload-utils";
 import Image from "next/image";
 import { cookies } from "next/headers";
@@ -39,7 +37,7 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
   if (!order) return notFound();
 
   const orderUserId =
-    typeof order.user === "string" ? order.user : order.user.id;
+    typeof order.user === "string" ? order.user : (order.user as User).id;
 
   if (orderUserId !== user?.id) {
     return redirect(`/sign-in?origin=thank-you?orderId=${order.id}`);
@@ -56,7 +54,7 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
       <div className="hidden lg:block h-80 overflow-hidden lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-12">
         <Image
           fill
-          src="/checkout-thank-you.jpg"
+          src="/thank-you.jpg"
           className="h-full w-full object-cover object-center"
           alt="thank you for your order"
         />
@@ -78,7 +76,7 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
                 to{" "}
                 {typeof order.user !== "string" ? (
                   <span className="font-medium text-gray-900">
-                    {order.user.email}
+                    {(order.user as User).email}
                   </span>
                 ) : null}
                 .
@@ -162,9 +160,9 @@ const ThankYouPage = async ({ searchParams }: PageProps) => {
               </div>
 
               <PaymentStatus
-                isPaid={order._isPaid}
+                isPaid={Boolean(order._isPaid)}
                 orderEmail={(order.user as User).email}
-                orderId={order.id}
+                orderId={String(order.id)}
               />
 
               <div className="mt-16 border-t border-gray-200 py-6 text-right">

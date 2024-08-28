@@ -44,6 +44,8 @@ const start = async () => {
         stripeWebhookHandler
     )
 
+
+
     const payload = await getPayloadClient({
         initOptions: {
             express: app,
