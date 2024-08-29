@@ -1,6 +1,5 @@
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import digiStore from "../../public/digiStore.svg";
 import Image from "next/image";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
@@ -25,7 +24,7 @@ const Navbar = async () => {
               <div className=" flex lg:ml-0">
                 <Link href="/" className="flex items-center">
                   <Image
-                    src={digiStore}
+                    src="/digistore.svg"
                     height={45}
                     width={45}
                     alt="DigiStore Logo"
