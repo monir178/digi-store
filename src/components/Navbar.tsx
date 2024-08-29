@@ -1,6 +1,6 @@
 import Link from "next/link";
 import MaxWidthWrapper from "./MaxWidthWrapper";
-import digiStore from "/digiStore.svg";
+import digiStore from "../../public/digiStore.svg";
 import Image from "next/image";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
